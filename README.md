@@ -5,8 +5,22 @@ telnet服务密码撞库
 
 **安装方法**    
 安装mysql、python2.7  
-Python依赖库： pexpect, MySQLdb, 17monip, scapy  
-将mysql数据库表mysql.sql导入数据库中  
+Python依赖库： sudo pip install -r requirements.txt
+将mysql数据库表mysql.sql导入数据库中   
+mysql -u root  -p <telnet-scanner/mysql/mysql.sql
+ 
+ 
+辑new_module.py文件
+88行替换成自己的数据账号密码
+db = MySQLdb.connect("localhost","root","111111","telnet_data",charset="utf8")
+ 
+修改文件ip.xml  改成需要扫描的IP段
+'''
+<?xml version="1.0" ?>
+<ip>
+<ip_range>49.112.30.0-49.112.30.30</ip_range>
+</ip>﻿
+'''
  
 **使用方法**  
 将网卡设置为混杂模式：  
