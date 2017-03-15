@@ -10,12 +10,13 @@ Python依赖库： sudo pip install -r requirements.txt
 mysql -u root  -p <telnet-scanner/mysql/mysql.sql
  
  
-辑new_module.py文件
+编辑 new_module.py文件
 88行替换成自己的数据账号密码
+'''python
 db = MySQLdb.connect("localhost","root","111111","telnet_data",charset="utf8")
- 
+''' 
 修改文件ip.xml  改成需要扫描的IP段
-'''
+'''xml
 <?xml version="1.0" ?>
 <ip>
 <ip_range>49.112.30.0-49.112.30.30</ip_range>
